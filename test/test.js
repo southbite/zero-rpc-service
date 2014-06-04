@@ -41,7 +41,7 @@ describe('e2e test', function() {
 		 
 	});
 	
-	/*
+
 	
 	it('should post to the error handler, receive result', function(callback) {
 		////console.log('in client test');
@@ -60,7 +60,7 @@ describe('e2e test', function() {
 		});
 		 
 	});
-	*/
+
 
 	/*
 	NOT SURE HOW TO DO THIS
