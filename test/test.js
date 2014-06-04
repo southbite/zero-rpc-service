@@ -32,8 +32,8 @@ describe('e2e test', function() {
 	   		testprop:0
 	   	 }, {ttl:10000}, function(e, result){
 			
-	   		//console.log('result');
-	   		//console.log(result);
+	   		console.log(e);
+	   		console.log(result);
 	   		expect(result.status).to.be('ok');
 			callback(e);
 			
@@ -41,6 +41,7 @@ describe('e2e test', function() {
 		 
 	});
 	
+	/*
 	
 	it('should post to the error handler, receive result', function(callback) {
 		////console.log('in client test');
@@ -50,6 +51,7 @@ describe('e2e test', function() {
 		   		
 	   	 }, {ttl:10000}, function(e, result){
 			
+			console.log(e);
 	   		//console.log('result');
 	   		//console.log(result);
 	   		expect(result.status).to.be('error');
@@ -58,6 +60,7 @@ describe('e2e test', function() {
 		});
 		 
 	});
+	*/
 
 	/*
 	NOT SURE HOW TO DO THIS

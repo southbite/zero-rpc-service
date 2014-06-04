@@ -7,8 +7,10 @@ module.exports = {
 	process:function(message, callback){
 		 var _this = this;
 		 
-		 //console.log('TEST HANDLER RAN!!!');
+		 console.log('TEST HANDLER RAN!!!');
+		  console.log(message);
+		 console.log(callback);
 		 
-		 callback(null, {result:'ok'});
+		 callback(null, {status:'ok'});
 	}
 }

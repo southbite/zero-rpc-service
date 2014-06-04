@@ -45,6 +45,7 @@ module.exports = {
 		}
 	},
 	client:{
+		server_url:'tcp://127.0.0.1:4242',
 		services:{
 			
 		},
