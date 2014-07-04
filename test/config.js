@@ -42,6 +42,15 @@ module.exports = {
 				log:true
 			},
 			instance:require('./test_handler_error')
+		},
+		test_handler_internal:{
+			settings:{
+				name:'test_handler',
+				setting1:'setting1',
+				setting1:'setting2',
+				log:true
+			},
+			instance:require('./test_handler_internal')
 		}
 	},
 	client:{

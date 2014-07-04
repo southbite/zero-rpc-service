@@ -11,7 +11,8 @@
     "event_framework": "git+ssh://git@github.com:southbite/utils_event_framework.git",
     "pluggable_framework": "git+ssh://git@github.com:southbite/utils-pluggable-service-layer.git",
     "pluggable-services": "git+ssh://git@github.com:southbite/utils-pluggable-services.git",
-    "zerorpc": "~0.9.3"
+    "zerorpc": "~0.9.3",
+    "zero-rpc-client": "git+ssh://git@github.com:southbite/zero-rpc-client.git"
   },
   "devDependencies": {
     "mocha": "~1.12.0",

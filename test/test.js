@@ -61,6 +61,23 @@ describe('e2e test', function() {
 		 
 	});
 
+	it('should post to the handler that calls the internal client, receive result', function(callback) {
+		////console.log('in client test');
+		 this.timeout(15000);
+		 
+		 client.performOperation('test_handler_internal', {
+	   		testprop:0
+	   	 }, {ttl:10000}, function(e, result){
+			
+	   		console.log(e);
+	   		console.log(result);
+	   		expect(result.status).to.be('ok');
+			callback(e);
+			
+		});
+		 
+	});
+
 
 	/*
 	NOT SURE HOW TO DO THIS
