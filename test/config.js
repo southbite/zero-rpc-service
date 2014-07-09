@@ -9,20 +9,25 @@ module.exports = {
 		else
 			return setting;
 	},
-	log4jsConfig:{
-		"appenders": [
-		      { type: 'console' },
-              {
-                "type": "file",
-                "absolute": true,
-                "filename": __dirname + "/activity.log",
-                "maxLogSize": 20480,
-                "backups": 10       
-              }
-            ]
-	},
 	services:{
-		
+		"logservice":{
+				settings:{
+					logger:{
+						"appenders": [
+						      { "type": "console"},
+				              {
+				                "type": "file",
+				                "absolute": true,
+				                "filename": __dirname + "/activity.log",
+				                "maxLogSize": 20480,
+				                "backups": 10
+				              }
+				            ]
+					},
+					log_level:['trace','debug','info','warn','error','fatal']
+				},
+				instance:require('pluggable-services').get('log')
+			}		
 	},
 	handlers:{
 		test_handler:{
@@ -56,7 +61,24 @@ module.exports = {
 	client:{
 		server_url:'tcp://127.0.0.1:4242',
 		services:{
-			
+			"logservice":{
+				settings:{
+					logger:{
+						"appenders": [
+						      { "type": "console"},
+				              {
+				                "type": "file",
+				                "absolute": true,
+				                "filename": __dirname + "/activity.log",
+				                "maxLogSize": 20480,
+				                "backups": 10
+				              }
+				            ]
+					},
+					log_level:['trace','debug','info','warn','error','fatal']
+				},
+				instance:require('pluggable-services').get('log')
+			}		
 		},
 		handlers:{
 			test_handler:{

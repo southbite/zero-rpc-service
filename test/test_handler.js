@@ -1,15 +1,15 @@
 module.exports = {
 	initialize:function(done){
 		var _this = this;
-		
+		_this.logger = _this.context.services.get('logservice');
 		done();
 	},
 	process:function(message, callback){
 		 var _this = this;
 		 
-		 console.log('TEST HANDLER RAN!!!');
-		  console.log(message);
-		 console.log(callback);
+		 _this.logger.log('TEST HANDLER RAN!!!');
+		 _this.logger.log(message);
+		 _this.logger.log(callback);
 		 
 		 callback(null, {status:'ok'});
 	}
