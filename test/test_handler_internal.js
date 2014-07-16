@@ -13,7 +13,7 @@ module.exports = {
 
 		 _this.context.internalClient.performOperation('test_handler', {
 	   		testprop:0
-	   	 }, {ttl:10000}, function(e, result){
+	   	 }, {ttl:30000}, function(e, result){
 			
 	   	 	console.log('TEST HANDLER INTERNAL RAN!!!');
 

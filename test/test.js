@@ -26,11 +26,11 @@ describe('e2e test', function() {
 
 	it('should post to the handler, receive result', function(callback) {
 		////console.log('in client test');
-		 this.timeout(15000);
+		 this.timeout(30000);
 		 
 		 client.performOperation('test_handler', {
 	   		testprop:0
-	   	 }, {ttl:10000}, function(e, result){
+	   	 }, {ttl:30000}, function(e, result){
 			
 	   		console.log(e);
 	   		console.log(result);
@@ -45,11 +45,11 @@ describe('e2e test', function() {
 	
 	it('should post to the error handler, receive result', function(callback) {
 		////console.log('in client test');
-		 this.timeout(15000);
+		 this.timeout(30000);
 		 
 		 client.performOperation('test_handler_error', {
 		   		
-	   	 }, {ttl:10000}, function(e, result){
+	   	 }, {ttl:30000}, function(e, result){
 			
 			console.log(e);
 	   		//console.log('result');
@@ -63,11 +63,11 @@ describe('e2e test', function() {
 
 	it('should post to the handler that calls the internal client, receive result', function(callback) {
 		////console.log('in client test');
-		 this.timeout(15000);
+		 this.timeout(30000);
 		 
 		 client.performOperation('test_handler_internal', {
 	   		testprop:0
-	   	 }, {ttl:10000}, function(e, result){
+	   	 }, {ttl:30000}, function(e, result){
 			
 	   		console.log(e);
 	   		console.log(result);

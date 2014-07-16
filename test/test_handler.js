@@ -7,10 +7,14 @@ module.exports = {
 	process:function(message, callback){
 		 var _this = this;
 		 
-		 _this.logger.log('TEST HANDLER RAN!!!');
+		 _this.logger.log('LONG HANDLER RUNNING!!!');
 		 _this.logger.log(message);
 		 _this.logger.log(callback);
+
+		 setTimeout(function(){
+		 	 callback(null, {status:'ok'});
+		 }, 15000);
 		 
-		 callback(null, {status:'ok'});
+		
 	}
 }
