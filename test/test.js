@@ -22,7 +22,29 @@ describe('e2e test', function() {
 		});
 	});
 	
-	
+	it('should post to the stress handler', function(callback) {
+		////console.log('in client test');
+		 this.timeout(30000);
+		 
+		 for (var i = 0; i < 1000;i ++){
+			 	 client.performOperation('stress_handler', {
+		   		testprop:0
+		   	 }, {ttl:30000}, function(e, result){
+				
+		   		expect(result.status).to.be('ok');
+		   		if (e){
+		   			i = 100;
+					callback(e);
+		   		}
+		   	
+				
+			});
+		 }
+
+		callback();
+		 
+	});
+
 
 	it('should post to the handler, receive result', function(callback) {
 		////console.log('in client test');
@@ -78,6 +100,7 @@ describe('e2e test', function() {
 		 
 	});
 
+	
 
 	/*
 	NOT SURE HOW TO DO THIS

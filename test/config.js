@@ -30,6 +30,15 @@ module.exports = {
 			}		
 	},
 	handlers:{
+		stress_handler:{
+			settings:{
+				name:'stress_handler',
+				setting1:'setting1',
+				setting1:'setting2',
+				log:true
+			},
+			instance:require('./stress_handler')
+		},
 		test_handler:{
 			settings:{
 				name:'test_handler',
