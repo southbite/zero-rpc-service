@@ -22,6 +22,7 @@ describe('e2e test', function() {
 		});
 	});
 	
+
 	it('should post to the stress handler', function(callback) {
 		////console.log('in client test');
 		 this.timeout(30000);
@@ -63,25 +64,9 @@ describe('e2e test', function() {
 		 
 	});
 	
-
 	
-	it('should post to the error handler, receive result', function(callback) {
-		////console.log('in client test');
-		 this.timeout(30000);
-		 
-		 client.performOperation('test_handler_error', {
-		   		
-	   	 }, {ttl:30000}, function(e, result){
-			
-			console.log(e);
-	   		//console.log('result');
-	   		//console.log(result);
-	   		expect(result.status).to.be('error');
-			callback(e);
-			
-		});
-		 
-	});
+	
+	
 
 	it('should post to the handler that calls the internal client, receive result', function(callback) {
 		////console.log('in client test');
@@ -93,6 +78,42 @@ describe('e2e test', function() {
 			
 	   		console.log(e);
 	   		console.log(result);
+	   		expect(result.status).to.be('ok');
+			callback(e);
+			
+		});
+		 
+	});
+
+	it('should post to the error handler, receive result', function(callback) {
+		////console.log('in client test');
+		 this.timeout(30000);
+		 
+		 client.performOperation('test_handler_error', {
+		   		
+	   	 }, {ttl:30000}, function(e, result){
+			
+			console.log(e);
+	   		//console.log('result');
+	   		//console.log(result);
+	   		expect(e != null).to.be(true);
+			callback();
+			
+		});
+		 
+	});
+
+	it('should post to the error handler, receive result', function(callback) {
+		////console.log('in client test');
+		 this.timeout(30000);
+		 
+		 client.performOperation('test_handler_error_retry', {
+		   		
+	   	 }, {ttl:30000, retry:3}, function(e, result){
+			
+			//console.log(e);
+	   		//console.log('result');
+	   		//console.log(result);
 	   		expect(result.status).to.be('ok');
 			callback(e);
 			

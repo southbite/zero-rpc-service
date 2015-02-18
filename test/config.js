@@ -57,6 +57,15 @@ module.exports = {
 			},
 			instance:require('./test_handler_error')
 		},
+		test_handler_error_retry:{
+			settings:{
+				name:'test_handler_error',
+				setting1:'setting1',
+				setting1:'setting2',
+				log:true
+			},
+			instance:require('./test_handler_error_retry')
+		},
 		test_handler_internal:{
 			settings:{
 				name:'test_handler',
